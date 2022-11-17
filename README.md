@@ -29,7 +29,8 @@
 ```cd weather```
 
 5. Создать и наполнить файл .env:
-```API_KEY = "d581d715ce3e9027dcb6c47ff2f0f36b"
+```
+API_KEY = "d581d715ce3e9027dcb6c47ff2f0f36b"
 DB_ENGINE=django.db.backends.postgresql
 DB_NAME=postgres
 POSTGRES_USER=postgres
