@@ -4,11 +4,15 @@ from .models import City, Weather
 
 
 class AdminCity(admin.ModelAdmin):
-    pass
+    list_display = ("id", "name", "population")
+    fields = ("name", "population")
+    readonly_fields = ("id",)
 
 
 class AdminWeather(admin.ModelAdmin):
-    pass
+    list_display = ("id", "city", "date", "temp")
+    fields = ("id", "city", "temp", "date")
+    readonly_fields = ("id", "date",)
 
 
 admin.site.register(City, AdminCity)

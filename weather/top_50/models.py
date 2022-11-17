@@ -6,15 +6,26 @@ class City(models.Model):
     name = models.CharField("Название", max_length=150)
     population = models.IntegerField("Население")
 
+    class Meta:
+        ordering = ["-pk"]
+        verbose_name = "Город"
+        verbose_name_plural = "Города"
+
     def __str__(self):
         return self.name
 
 
 class Weather(models.Model):
-    date = models.DateTimeField("Дата прогноза", auto_now_add=True)
+    """Погода в топ-50 городов."""
+    date = models.DateTimeField("Дата прогноза", auto_now=True)
     city = models.ForeignKey(
         City, on_delete=models.CASCADE, verbose_name="Город", related_name="weathers")
-    temp = models.FloatField("Температура в градусах Цельсия")
+    temp = models.FloatField("Температура в градусах Цельсия", default=0)
+
+    class Meta:
+        ordering = ["-pk"]
+        verbose_name = "Погода"
+        verbose_name_plural = "Погода"
 
     def __str__(self):
-        return f"Погода в {city} - {temp} градусов Цельсия."
+        return str(self.city)
