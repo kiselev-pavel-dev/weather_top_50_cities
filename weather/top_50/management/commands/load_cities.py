@@ -25,5 +25,5 @@ class Command(BaseCommand):
             items = csv.reader(csvfile, delimiter=",")
             for _, city, _, pop2022, _, _ in items:
                 City.objects.get_or_create(name=city, population=pop2022)
+        print("Города загружены в базу!")
         collector.delay()
-        print("Данные успешно загружены!")
