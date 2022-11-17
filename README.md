@@ -30,5 +30,13 @@
 
 5. Запустить контейнеры:
 
-```docker compose up --build
+```docker compose up --build```
+
+6. После запуска перейти в контейнер с Django:
+
+```docker exec -it weather_django bash```
+
+7. Создать миграции, применить их, создать суперпользователя:
+
+```
 
