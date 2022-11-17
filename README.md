@@ -28,15 +28,25 @@
 
 ```cd weather```
 
-5. Запустить контейнеры:
+5. Создать и наполнить файл .env:
+```API_KEY = "d581d715ce3e9027dcb6c47ff2f0f36b"
+DB_ENGINE=django.db.backends.postgresql
+DB_NAME=postgres
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+DB_HOST=db
+DB_PORT=5432
+```
+
+6. Запустить контейнеры:
 
 ```docker compose up --build```
 
-6. После запуска перейти в контейнер с Django:
+7. После запуска перейти в контейнер с Django:
 
 ```docker exec -it weather_django bash```
 
-7. Создать миграции, применить их, создать суперпользователя и загрузить города(подготовлен csv c 50 крупнейшими городами):
+8. Создать миграции, применить их, создать суперпользователя и загрузить города(подготовлен csv c 50 крупнейшими городами):
 
 ```python manage.py makemigrations```
 ```python manage.py migrate```
