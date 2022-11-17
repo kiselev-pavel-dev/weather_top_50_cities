@@ -50,8 +50,11 @@ DB_PORT=5432
 8. Создать миграции, применить их, создать суперпользователя и загрузить города (подготовлен csv файл c 50 крупнейшими городами):
 
 ```python manage.py makemigrations```
+
 ```python manage.py migrate```
+
 ```python manage.py createsuperuser```
+
 ```python manage.py load_cities```
 
 После этого создадутся города в базе, и выполнится обновление погоды для этих городов.
