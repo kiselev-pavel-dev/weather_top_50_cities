@@ -36,7 +36,14 @@
 
 ```docker exec -it weather_django bash```
 
-7. Создать миграции, применить их, создать суперпользователя:
+7. Создать миграции, применить их, создать суперпользователя и загрузить города(подготовлен csv c 50 крупнейшими городами):
 
-```
+```python manage.py makemigrations```
+```python manage.py migrate```
+```python manage.py createsuperuser```
+```python manage.py load_cities```
+
+После этого создадутся города в базе, и выполнится обновление погоды для этих городов.
+
+
 
