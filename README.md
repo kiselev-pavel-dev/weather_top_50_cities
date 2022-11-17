@@ -11,3 +11,24 @@
     
 # Запуск и работа с проектом
 
+1. Клонировать репозиторий к себе на локальную машину:
+
+```git clone git@github.com:kiselev-pavel-dev/weather_top_50_cities.git```
+
+2. Перейти в директорию с проектом:
+
+```cd weather_top_50_cities```
+
+3. Создать и активировать виртуальное окружение:
+
+```python -m venv venv```
+```source venv/scripts/activate```
+
+4. Перейти в категорию weather:
+
+```cd weather```
+
+5. Запустить контейнеры:
+
+```docker compose up --build
+
